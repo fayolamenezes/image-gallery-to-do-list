@@ -1,0 +1,418 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  background: #f0f2f5;
+  color: #1d3557;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #a8dadc; /* pastel blue */
+  color: #1d3557;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+nav {
+  margin-top: 0.25rem;
+}
+
+nav a {
+  color: #457b9d;
+  margin: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.125rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+nav a:hover {
+  color: #1d3557;
+  text-decoration: underline;
+}
+
+/* Center content container */
+.centered-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 480px;
+  width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* Input + button group wrapper to center horizontally */
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto 2rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="file"] {
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.input-group button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #457b9d;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.input-group button:hover {
+  background-color: #1d3557;
+}
+
+/* Gallery styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 1.5rem;
+  justify-items: center;
+}
+
+.gallery-grid img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* To-Do List styling */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  width: 100%;
+  max-width: 400px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+li {
+  background: #e9f1f7;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  color: #1d3557;
+  text-align: left;
+}
+
+/* Error messages */
+.error {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: #a8dadc;
+  color: #1d3557;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.04em;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .centered-card {
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.3rem 0;
+    font-size: 1rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group input[type="text"],
+  .input-group input[type="file"],
+  .input-group button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background: #1e3a5f; /* dark pastel blue */
+  color: #a8dadc;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode nav a {
+  color: #a8dadc;
+}
+
+body.dark-mode nav a:hover {
+  color: #f1faee;
+  text-decoration: underline;
+}
+
+body.dark-mode .centered-card {
+  background: #1f1f1f;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .input-group input[type="text"],
+body.dark-mode .input-group input[type="file"] {
+  background: #2c2c2c;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode .input-group button {
+  background-color: #457b9d;
+  color: #e0e0e0;
+  border: none;
+}
+
+body.dark-mode .input-group button:hover {
+  background-color: #1d3557;
+}
+
+body.dark-mode .gallery-grid img {
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode ul li {
+  background: #2c3e50;
+  color: #e0e0e0;
+}
+
+body.dark-mode .error {
+  color: #f08080;
+}
+
+body.dark-mode footer {
+  background: #1e3a5f;
+  color: #a8dadc;
+}
+
+/* Optional: Adjust scrollbars for dark mode */
+body.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #457b9d;
+  border-radius: 4px;
+}
+
+/* Contact form label/input vertical layout */
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: left;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  box-sizing: border-box;
+  letter-spacing: 0.01em;
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #457b9d;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 480px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+form button:hover {
+  background-color: #1d3557;
+}
+
+/* Dark mode support for form */
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background: #2c2c2c;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+body.dark-mode form button {
+  background-color: #457b9d;
+  color: #e0e0e0;
+}
+
+body.dark-mode form button:hover {
+  background-color: #1d3557;
+}
+
+/* Circle checkbox */
+.check-circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid #457b9d;
+  border-radius: 50%;
+  margin-right: 12px;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.check-circle.checked {
+  background-color: #457b9d;
+  border-color: #457b9d;
+}
+
+.check-circle.checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+/* Completed task styles */
+li.completed .task-text {
+  color: #999;
+  text-decoration: line-through;
+  user-select: none;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 1.5rem;
+  justify-items: center;
+  max-width: 460px; /* approx 3 * 140 + gaps */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.check-circle:hover {
+  border-color: #1d3557;
+}
+
+li {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+li {
+  animation: fadeIn 0.3s ease;
+}
+

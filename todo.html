@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>To-Do List</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Image Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- Dark mode toggle button -->
+    <button onclick="toggleAndSave()" 
+            style="margin-top:10px; padding:0.5rem 1rem; border:none; border-radius:6px; cursor:pointer; background:#457b9d; color:#fff; font-weight:600;">
+      Toggle Dark Mode
+    </button>
+  </header>
+
+  <main class="centered-card">
+    <div class="input-group">
+      <input type="text" id="newTask" placeholder="Enter new task..." />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="taskList"></ul>
+  </main>
+
+  <script>
+    // Load dark mode preference from localStorage on page load
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+    }
+
+    // Toggle dark mode and save preference
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function toggleAndSave() {
+      toggleDarkMode();
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+  </script>
+
+  <script src="todo.js"></script>
+</body>
+</html>

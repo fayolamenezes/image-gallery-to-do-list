@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <!-- Dark mode toggle button -->
+    <button id="darkModeToggle" style="margin-top: 0.5rem; cursor: pointer; padding: 0.4rem 0.8rem; border-radius: 6px; border: none; background-color: #457b9d; color: white; font-weight: 600;">
+      Toggle Dark Mode
+    </button>
+  </header>
+
+  <main class="centered-card">
+    <section class="card">
+      <h2>Get in Touch</h2>
+      <form id="contactForm">
+        <label>Name:
+          <input type="text" name="name" required />
+        </label>
+        <label>Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>Message:
+          <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">Submit</button>
+        <p class="error" id="formError"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="form-validation.js"></script>
+  <script>
+    // Dark mode toggle script
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
