@@ -1,4 +1,4 @@
-# 🌐 Responsive & Interactive Web Project
+# Responsive & Interactive Web Project
 
 This is a frontend project designed to build and showcase **intermediate-level web development skills** using **HTML, CSS, and JavaScript**. It includes a responsive layout, interactive features, and data persistence using localStorage.
 
